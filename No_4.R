@@ -12,6 +12,11 @@ ggboxplot(data, x = "Glass", y = "Light", color = "Temp",
 #b. Lakukan uji ANOVA dua arah.
 res.aov <- aov(Light ~ Temp + Glass, data)
 summary(res.aov)
+res.aov <- aov(Light ~ Temp * Glass, data)
+summary(res.aov)
+print("Temperatur memiliki pengaruh signifikan terhadap keluaran cahaya untuk tingkat signifikansi 0.05")
+print("Jenis kaca memiliki pengaruh signifikan terhadap keluaran cahaya untuk tingkat signifikansi 0.05")
+print("Nilai p menunjukkan bahwa temperatur mempengaruhi hubungan antara tipe kaca dan cahaya")
 #c. Tampilkan tabel dengan mean dan standar deviasi keluaran cahaya untuk setiap perlakuan (kombinasi kaca pelat muka dan suhu operasi).
 mean_table = aggregate(data$Light ~ data$Glass + data$Temp, data, mean)
 colnames(mean_table) <- c("Glass", "Temp", "Light Mean")

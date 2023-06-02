@@ -25,4 +25,4 @@ sprintf("t value = %f", p_value)
 # NOTE : Nilai p_value hasil t.test berbeda dengan nilai p_value pt(6.8039, df = 9, lower.tail = FALSE)
 t.test(x = data_prev, y = data_after, paired = TRUE)
 
-print("Karena nilai p_value jauh di bawah critical value,  maka hipotesis null ditolak. Maka, menurut bukti terdapat pengaruh pada hal kadar saturasi oksigen sebelum dan sesudah melakukan aktivitas A.")
+print("Karena nilai p_value jauh di bawah critical value 0.5,  maka hipotesis null ditolak. Maka, menurut bukti terdapat pengaruh pada hal kadar saturasi oksigen sebelum dan sesudah melakukan aktivitas A.")
